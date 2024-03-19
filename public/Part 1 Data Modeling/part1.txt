@@ -1,0 +1,50 @@
+. **Animals Table**
+   - `AnimalID`: Primary Key
+   - `Name`: Text
+   - `Age`: Integer
+   - `Gender`: Text
+   - `HealthStatus`: Text
+   - `SpeciesID`: Foreign Key (links to Species Table)
+   - `AdoptionStatus`: Text
+
+2. **Species Table**
+   - `SpeciesID`: Primary Key
+   - `SpeciesName`: Text
+   - `AverageLifespan`: Integer
+   - `CareInstructions`: Text
+
+3. **Adopters Table**
+   - `AdopterID`: Primary Key
+   - `FullName`: Text
+   - `Email`: Text
+   - `Phone`: Text
+   - `HomeType`: Text
+   - `ExperienceWithPets`: Text
+
+4. **AdoptionRecords Table**
+   - `AdoptionRecordID`: Primary Key
+   - `AnimalID`: Foreign Key (links to Animals Table)
+   - `AdopterID`: Foreign Key (links to Adopters Table)
+   - `AdoptionDate`: Date
+   - `FollowUpDate`: Date
+
+
+
+Relationships:
+
+• One-to-Many: Between Species and Animals. One species can have many animals.
+
+• One-to-Many: Between Adopters and AdoptionRecords. One adopter can have many adoption records.
+
+• One-to-One: Between Animals and AdoptionRecords. Each animal has one adoption record.
+
+This design allows you to track the animals, their species, the people who adopt them, and the individual adoption records. You can expand this design further by adding more details or creating additional tables for more complex relationships and data tracking.
+
+
+• Table Relationships: Identify how tables relate to each other, such as one-to-many or many-to-many relationships.
+
+• Entity Attributes: Determine the attributes for each entity, like animal_id, species, age, etc., for the animals table.
+
+• Primary & Foreign Keys: Establish primary keys for entity identification and foreign keys for relational integrity.
+
+• Normalization: Apply normalization rules to reduce redundancy and improve data integrity
